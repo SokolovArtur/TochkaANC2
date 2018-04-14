@@ -1,0 +1,14 @@
+{
+  "name": "Tochka",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "4.1.0",
+    "datatables.net-bs4": "3.2.2",
+    "Font-Awesome": "4.7.0",
+    "jquery": "3.3.1",
+    "jquery-validation": "1.17.0",
+    "jquery-validation-unobtrusive": "3.2.9",
+    "MDBootstrap": "4.5.0",
+    "simplemde": "1.11.2"
+  }
+}

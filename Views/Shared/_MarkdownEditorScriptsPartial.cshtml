@@ -1,0 +1,11 @@
+﻿<script src="~/lib/simplemde/dist/simplemde.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        var simplemde = [];
+        $("main textarea").each(function (index) {
+            var textareaId = $(this).attr("id");
+            simplemde[textareaId] = new SimpleMDE({ element: document.getElementById(textareaId) });
+        });
+    });
+</script>
