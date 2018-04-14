@@ -36,7 +36,7 @@ namespace Tochka
             }
             else
             {
-                app.UseExceptionHandler("/Home/Error");
+                app.UseExceptionHandler("/Backend/Home/Error");
             }
 
             app.UseStaticFiles();
@@ -46,7 +46,7 @@ namespace Tochka
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller}/{action=Index}/{id?}");
+                    template: "Backend/{controller=Home}/{action=Index}/{id?}");
             });
 
             app.UseSpa(spa =>

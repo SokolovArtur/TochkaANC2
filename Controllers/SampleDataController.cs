@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Tochka.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("Api/[controller]")]
     public class SampleDataController : Controller
     {
         private static string[] Summaries = new[]
