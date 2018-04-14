@@ -1,0 +1,82 @@
+
+// ------ Breakpoints -----
+
+// Инфиксы контрольных точек
+$grid-infixes: ("xl", "l", "m", "s", "xs");
+
+// Максимальные размеры, на которых будет изменяться макет
+// Используется в мультимедийных запросах
+$grid-breakpoints-width: (
+  "xl": 0,
+  "l": 1280 - 1px,
+  "m": 1024 - 1px,
+  "s": 768 - 1px,
+  "xs": 512 - 1px
+);
+
+
+
+// ----- Colors -----
+
+$black: #000000;
+$dark-grey: #49423D;
+$light-gray: #D7D7D7;
+$white: #FFFFFF;
+
+$colors: (
+  "black": $black,
+  "dark-grey": $dark-grey,
+  "light-gray": $light-gray,
+  "white": $white,
+);
+
+
+
+// ----- Font Face -----
+
+$font-Anglecia-Bold: "AngleciaProTitle-Bold", serif;
+$font-Geometria-Bold: "Geometria-Bold", sans-serif;
+$font-Geometria-Medium: "Geometria-Medium", sans-serif;
+$font-Geometria-Regular: "Geometria-Regular", sans-serif;
+
+
+
+// ----- Fonts -----
+
+// Размеры REM
+$grid-rem-size: ("xl": 25px, "l": 20px, "m": 15px, "s": 10px, "xs": 10px);
+
+$grid-font-xxl-size: ( "xl": 20px, "l": 18px, "m": 16px, "s": 14px, "xs": 14px);
+$grid-font-xl-size: ("xl": 18px, "l": 16px, "m": 14px, "s": 14px, "xs": 14px);
+$grid-font-l-size: ("xl": 16px, "l": 14px, "m": 14px, "s": 12px, "xs": 12px);
+$grid-font-m-size: ("xl": 14px, "l": 14px, "m": 12px, "s": 12px, "xs": 12px);
+$grid-font-s-size: ("xl": 12px, "l": 12px, "m": 10px, "s": 10px, "xs": 10px);
+$grid-font-xs-size: ("xl": 10px, "l": 10px, "m": 10px, "s": 10px, "xs": 10px);
+
+// Соотношение размер шрифта / межстрочный интервал
+$geometria-sizes: (20px: 26px, 18px: 24px, 16px: 20px, 14px: 20px, 12px: 16px, 10px: 14px);
+
+
+
+// ----- GRID -----
+
+// Количество столбцов и ширина желоба
+$grid-columns: 30;
+$grid-gutter-width: 2rem;
+
+// Ширина одной колонки
+$grid-column-width: (
+  "xl": 40px,
+  "l": percentage(1 / $grid-columns),
+  "m": percentage(1 / $grid-columns),
+  "s": percentage(1 / $grid-columns),
+  "xs": percentage(1 / $grid-columns)
+);
+
+
+
+// ----- SPACING -----
+
+$spacers-size: 0.2rem;
+
+

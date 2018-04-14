@@ -1,0 +1,57 @@
+@import "../variables";
+
+
+
+// Margin and Padding
+@each $prop, $abbrev in (margin: m, padding: p) {
+  @for $i from 0 through 20 {
+    .#{$abbrev}-#{$i} {
+      #{$prop}: $i * $spacers-size $i * $spacers-size !important;
+    }
+    .#{$abbrev}t-#{$i} {
+      #{$prop}-top: $i * $spacers-size !important;
+    }
+    .#{$abbrev}r-#{$i} {
+      #{$prop}-right: $i * $spacers-size !important;
+    }
+    .#{$abbrev}b-#{$i} {
+      #{$prop}-bottom: $i * $spacers-size !important;
+    }
+    .#{$abbrev}l-#{$i} {
+      #{$prop}-left: $i * $spacers-size !important;
+    }
+    .#{$abbrev}x-#{$i} {
+      #{$prop}-right: $i * $spacers-size !important;
+      #{$prop}-left: $i * $spacers-size !important;
+    }
+    .#{$abbrev}y-#{$i} {
+      #{$prop}-top: $i * $spacers-size !important;
+      #{$prop}-bottom: $i * $spacers-size !important;
+    }
+  }
+}
+
+// Некоторые специальные запасы
+.m-auto {
+  margin: auto !important;
+}
+.mt-auto {
+  margin-top: auto !important;
+}
+.mr-auto {
+  margin-right: auto !important;
+}
+.mb-auto {
+  margin-bottom: auto !important;
+}
+.ml-auto {
+  margin-left: auto !important;
+}
+.mx-auto {
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+.my-auto {
+  margin-top: auto !important;
+  margin-bottom: auto !important;
+}

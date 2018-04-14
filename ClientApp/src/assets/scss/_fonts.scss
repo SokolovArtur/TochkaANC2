@@ -1,0 +1,72 @@
+@import "mixins/fonts";
+
+@import "varpoint";
+
+
+
+@each $infix in $grid-infixes {
+  @include breakpoint($infix) {
+    // Корневой размера шрифта элемента (значение rem)
+    $rem-size: map-get($grid-rem-size, $infix);
+    html {
+      font-size: $rem-size;
+    }
+
+    body {
+      @include make-geometria-size(map-get($grid-font-l-size, $infix));
+      font-family: $font-Geometria-Regular;
+    }
+
+    // Базовые размеры шрифтов
+    .font-xxl-size {
+      @include make-geometria-size(map-get($grid-font-xxl-size, $infix));
+    }
+    .font-xl-size {
+      @include make-geometria-size(map-get($grid-font-xl-size, $infix));
+    }
+    .font-l-size {
+      @include make-geometria-size(map-get($grid-font-l-size, $infix));
+    }
+    .font-m-size {
+      @include make-geometria-size(map-get($grid-font-m-size, $infix));
+    }
+    .font-s-size {
+      @include make-geometria-size(map-get($grid-font-s-size, $infix));
+    }
+    .font-xs-size {
+      @include make-geometria-size(map-get($grid-font-xs-size, $infix));
+    }
+
+    // Заголовок h4 размером как наибольший базовый шрифт
+    h4 {
+      @include make-geometria-size(map-get($grid-font-xxl-size, $infix));
+      font-family: $font-Anglecia-Bold;
+    }
+  }
+}
+
+.font-bold {
+  font-family: $font-Geometria-Bold !important;
+}
+.font-medium {
+  font-family: $font-Geometria-Medium !important;
+}
+.font-regular {
+  font-family: $font-Geometria-Regular !important;
+}
+
+h1 {
+  font-size: 3.5rem;
+  line-height: 4rem;
+  font-family: $font-Anglecia-Bold;
+}
+h2 {
+  font-size: 2.5rem;
+  line-height: 2.9rem;
+  font-family: $font-Anglecia-Bold;
+}
+h3 {
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  font-family: $font-Anglecia-Bold;
+}

@@ -5,7 +5,7 @@
         </a>
     </div>
     <div class="row navbar__collapse" [ngClass]='{ "in": isExpanded }'>
-        <div class="col-30 p-5 col-m-auto navbar__collapse-nav" [routerLinkActive]="['bg-light-gray']">
+        <div class="col-30 p-5 col-m-auto navbar__collapse-nav" [routerLinkActive]="['bg-light-gray']" [routerLinkActiveOptions]="{ exact: true }">
             <a [routerLink]="['/']">Home</a>
     </div>
         <div class="col-30 p-5 col-m-auto navbar__collapse-nav" [routerLinkActive]="['bg-light-gray']">

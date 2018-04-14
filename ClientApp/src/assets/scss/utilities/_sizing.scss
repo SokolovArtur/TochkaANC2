@@ -1,0 +1,41 @@
+@import "../varpoint";
+
+
+
+@each $infix in $grid-infixes {
+  @include breakpoint($infix) {
+    $-infix: breakpoint-infix($infix);
+
+    @for $i from 1 through 200 {
+      $width: $i * ($grid-columns * map-get($grid-column-width, $infix)) / 100;
+      .vw-#{$i} {
+        width: $width !important;
+      }
+      .max-vw-#{$i} {
+        max-width: $width !important;
+      }
+    }
+  }
+}
+
+@for $i from 1 through 200 {
+  .vh-#{$i} {
+    height: #{$i}vh !important;
+  }
+  .max-vh-#{$i} {
+    max-height: #{$i}vh !important;
+  }
+}
+
+.vw-auto {
+  width: auto !important;
+}
+.max-vw-auto {
+  width: auto !important;
+}
+.vh-auto {
+  height: auto !important;
+}
+.max-vh-auto {
+  height: auto !important;
+}

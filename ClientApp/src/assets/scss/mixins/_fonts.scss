@@ -1,0 +1,8 @@
+@import "../variables";
+
+
+
+@mixin make-geometria-size($size) {
+  font-size: $size;
+  line-height: map-get($geometria-sizes, $size);
+}
