@@ -28,34 +28,79 @@
 
     <link rel="icon" type="image/x-icon" href="/admin-panel/favicon.ico" />
 </head>
-<body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Tochka</a>
+<body class="fixed-sn light-blue-skin">
+    <!--Main Navigation-->
+    <header>
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark double-nav fixed-top scrolling-navbar">
+            <!-- SideNav slide-out button -->
+            <div class="float-left">
+                <a href="#" data-activates="slide-out" class="button-collapse">
+                    <i class="fa fa-bars"></i>
+                </a>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
-                </ul>
+            <!--/. SideNav slide-out button -->
+        </nav>
+        <!--/. Navbar -->
+
+        <!-- Sidebar navigation -->
+        <div id="slide-out" class="side-nav fixed sn-bg-4">
+            <ul class="custom-scrollbar list-unstyled">
+                <!-- Logo -->
+                <li>
+                    <div class="logo-wrapper waves-light">
+                        <a asp-area="" asp-controller="Home" asp-action="Index">
+                            <img src="~/admin-panel/images/tochka_logo.svg" class="img-fluid flex-center">
+                        </a>
+                    </div>
+                </li>
+
+                <!-- Side navigation links -->
+                <li>
+                    <ul class="collapsible collapsible-accordion">
+                        <li>
+                            <a class="collapsible-header waves-effect arrow-r"><i class="fa fa-chevron-right"></i> Main menu<i class="fa fa-angle-down rotate-icon"></i></a>
+                            <div class="collapsible-body">
+                                <ul>
+                                    <li><a asp-area="" asp-controller="Home" asp-action="Index" class="waves-effect">Home</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a asp-area="" asp-controller="Home" asp-action="About" class="waves-effect">About</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a asp-area="" asp-controller="Home" asp-action="Contact" class="waves-effect">Contact</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <!--/. Side navigation links -->
+            </ul>
+            <div class="sidenav-bg mask-strong"></div>
+        </div>
+        <!--/. Sidebar navigation -->
+    </header>
+    <!--/. Main Navigation-->
+
+    <!-- Main layout -->
+    <main>
+        <div class="container-fluid">
+            @RenderBody()
+        </div>
+    </main>
+    <!--/. Main layout -->
+
+    <!-- Footer -->
+    <footer class="page-footer center-on-small-only ">
+        <!-- Copyright -->
+        <div class="footer-copyright">
+            <div class="container-fluid">
+                &copy; 2018 - Tochka
             </div>
         </div>
-    </nav>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; 2018 - Tochka</p>
-        </footer>
-    </div>
+        <!--/. Copyright -->
+    </footer>
+    <!--/. Footer -->
 
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
