@@ -109,14 +109,8 @@ RUN npm install -g npm
 
 
 
-RUN npm install -g @angular/cli@1.7.4 \
-    && dotnet new --install Microsoft.DotNet.Web.Spa.ProjectTemplates::2.0.0
-
-
-
 WORKDIR /var/www/html
 COPY . .
 
-RUN rm -rf /var/www/html/bin /var/www/html/obj
 RUN dotnet publish -c Release
 ENTRYPOINT ["dotnet", "/var/www/html/bin/Release/netcoreapp2.0/Tochka.dll"]

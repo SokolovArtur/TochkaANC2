@@ -11,7 +11,7 @@
         "assets"
       ],
       "index": "index.html",
-      "main": "main.ts",
+      "main": "main.client.ts",
       "polyfills": "polyfills.ts",
       "test": "test.ts",
       "tsconfig": "tsconfig.app.json",
@@ -26,6 +26,29 @@
         "dev": "environments/environment.ts",
         "prod": "environments/environment.prod.ts"
       }
+    },
+    {
+      "name": "ssr",
+      "root": "src",
+      "outDir": "dist-server",
+      "assets": [
+        "assets"
+      ],
+      "main": "main.server.ts",
+      "polyfills": "polyfills.ts",
+      "tsconfig": "tsconfig.server.json",
+      "testTsconfig": "tsconfig.spec.json",
+      "prefix": "app",
+      "styles": [
+        "../src/assets/scss/app.scss"
+      ],
+      "scripts": [],
+      "environmentSource": "environments/environment.ts",
+      "environments": {
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
+      },
+      "platform": "server"
     }
   ],
   "e2e": {
